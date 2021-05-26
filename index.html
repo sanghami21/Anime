@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    
+    <style>
+        h1{
+
+          text-align : center;
+          font-style : font-family: "Lucida Console", Courier, monospace;
+          color :  white;
+          letter-spacing : 3px;
+          padding : 15px;
+        }
+        .container{
+             display : grid;
+             grid-template-columns: 1fr 1fr;
+
+        }
+
+        .display{
+          background-color :  #d9c7ad;
+          height : 500px;
+          width: 500px;
+          margin-left : 50px;
+          margin-top : 10px;
+          border-radius : 25px;
+          float : left;
+             }
+
+
+          .choose{
+
+            margin-top : 20px;
+            margin-left :200px;
+          }
+
+          label{
+            color : white;
+            font-family: 'Fredoka One', cursive;
+            font-size : 25px;
+            margin-left : 70px;
+            margin-top : 500px;
+          }
+
+          select {
+            height : 40px;
+        width: 200px;
+        font-size :  20px;
+        margin-left : 100px;
+        border-radius : 10px;
+        background-color: #aa8699;
+        text-align : center;
+        appearance :  none;
+        font-style : font-family: "Lucida Console", Courier, monospace;
+
+    }
+    .data{
+      display : none;
+    }
+    #pie{
+          background-color : 	#94a6b9;
+          height : 550px;
+          width: 600px;
+          margin-right : 500px;
+          margin-left: 40px;
+          margin-top : 20px;
+          border-radius : 25px;
+          float : right;
+          }
+
+  .app{
+    text-align: center;
+    display : flex;
+    justify-content: space-around;;
+    align-items: center
+  }
+
+</style>
+
+    <meta charset="utf-8">
+    <title>Anime Maze</title>
+  </head>
+
+  <body style= "background-color : black">
+     <h1>A N I M A E  M A Z E</h1>
+<div  class = "container">
+     <div class = "choose">
+         <div class="img">
+
+     <label >Select Anime</label>
+
+<select id= "name">
+  <option>Select</option>
+  <option value="haikyuu">Haikyuu</option>
+  <option value="jujutsu">Jujutsu Kaisen</option>
+  <option value="Death">Death Note</option>
+  <option value="demon">Demon Slayer</option>
+  <option value="YOI">Yuri ON Ice</option>
+</select>
+</div>
+<div class="display">
+
+            <div id="haikyuu" class="data">
+              <p class= "image"><a href = "haikyuu.html"><img src="haikyu.jpg"/> </a></p>
+            </div>
+
+           <div id="jujutsu" class="data">
+              <p class= "image"> <a href = "jujutsu.html"><img src="juju.jpg"/></a></p>
+           </div>
+
+           <div id="Death" class="data">
+              <p class= "image"><a href = "death2.html"><img src="death.jpg"/></a></p>
+          </div>
+
+         <div id="demon" class="data">
+              <p class= "image"><a href ="demon2.html"><img src="demon.jpg"/></a></p>
+         </div>
+
+         <div id="YOI" class="data">
+                <p class= "image"><a href = "yoi.html"><img src="YOI.jpg"/></a></p>
+        </div>
+
+
+
+          </div>
+
+     </div>
+     <div id = "pie"></div>
+
+     </div>
+
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+        <script src="https://unpkg.com/react/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/recharts/umd/Recharts.min.js"></script>
+<script src="../src/react.js" type="type/javascript"></script>
+           <style>
+     <script>
+              $(document).ready(funtion(){
+                $("#name").on('change', function(){
+                   $(".data").hide();
+                   $("#"+ $(this).val()).fadeIn(700);
+                }).change();
+              });
+
+     </script>
+  </body>
+</html>
